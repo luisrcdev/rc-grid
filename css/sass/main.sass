@@ -1,0 +1,97 @@
+*
+  font-family: 'Roboto', sans-serif
+  font-weight: 300
+
+$primary: #fc5c65
+$primary-dark: lighten($primary, 20%)
+$secundary: #ecf0f1
+$dark: #2c3e50
+$danger: #f39c12
+
+@mixin seccion-titulo
+  font-size: 1.6rem
+  font-weight: 400
+  color: $primary
+  margin: 1em 0
+
+@mixin section-subtitulo
+  font-size: 1.3rem
+  font-weight: 400
+  color: $dark
+  line-height: 1.4
+  margin: 1em 0
+
+@mixin section-texto
+  font-size: 1.1rem
+  font-weight: 400
+  color: $dark
+  line-height: 1.4
+  margin: 1em 0
+
+@mixin section-nota
+  display: block
+  color: $danger
+  background: transparentize($danger,.9)
+  border: 1px solid $danger
+  border-radius: 5px
+  margin: 1em 0
+  font-size: .8rem
+  line-height: 1.2
+  padding: .3rem
+
+.fila.demo
+  outline: 2px solid $primary-dark
+  background: $primary-dark
+  padding: 10px
+  margin: 1em auto
+  .demo__cajademo
+    outline: 5px solid $primary-dark
+    text-align: center
+    background: $primary
+    padding: 1em 0
+    code
+      font-family: monospace
+      font-weight: bold
+      color: $secundary
+header
+  background: $primary
+  .header__contenido
+    text-align: center
+    color: $secundary
+    &__titulo
+      font-size: 2rem
+      margin: 1em 0 .5em 0
+    &__subtitulo
+      font-size: 1.3rem
+      margin: 0 0 1.5em 0
+section
+  background: $secundary
+  .section__contenido
+    &__titulo
+      @include seccion-titulo
+    &__subtitulo
+      @include section-subtitulo
+    &__texto
+      @include section-texto
+      &__nota
+        @include section-nota
+footer
+  background: $primary
+  p
+    display: inline-block
+    color: $secundary
+    margin: 1em 0
+  .redes-sociales
+    color: $secundary
+    text-align: right
+    font-size: 2rem
+    @media all and (max-width:767px)
+      text-align: center
+    .icon
+      padding: .2em
+      margin: .3em
+      transition: transform 1s ease
+
+      &:hover
+        transform: rotate(360deg)
+        color: $dark

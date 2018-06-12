@@ -1,0 +1,87 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300; }
+
+.fila.demo {
+  outline: 2px solid #fec0c4;
+  background: #fec0c4;
+  padding: 10px;
+  margin: 1em auto; }
+  .fila.demo .demo__cajademo {
+    outline: 5px solid #fec0c4;
+    text-align: center;
+    background: #fc5c65;
+    padding: 1em 0; }
+    .fila.demo .demo__cajademo code {
+      font-family: monospace;
+      font-weight: bold;
+      color: #ecf0f1; }
+
+header {
+  background: #fc5c65; }
+  header .header__contenido {
+    text-align: center;
+    color: #ecf0f1; }
+    header .header__contenido__titulo {
+      font-size: 2rem;
+      margin: 1em 0 .5em 0; }
+    header .header__contenido__subtitulo {
+      font-size: 1.3rem;
+      margin: 0 0 1.5em 0; }
+
+section {
+  background: #ecf0f1; }
+  section .section__contenido__titulo {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #fc5c65;
+    margin: 1em 0; }
+  section .section__contenido__subtitulo {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #2c3e50;
+    line-height: 1.4;
+    margin: 1em 0; }
+  section .section__contenido__texto {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #2c3e50;
+    line-height: 1.4;
+    margin: 1em 0; }
+    section .section__contenido__texto__nota {
+      display: block;
+      color: #f39c12;
+      background: rgba(243, 156, 18, 0.1);
+      border: 1px solid #f39c12;
+      border-radius: 5px;
+      margin: 1em 0;
+      font-size: .8rem;
+      line-height: 1.2;
+      padding: .3rem; }
+
+footer {
+  background: #fc5c65; }
+  footer p {
+    display: inline-block;
+    color: #ecf0f1;
+    margin: 1em 0; }
+  footer .redes-sociales {
+    color: #ecf0f1;
+    text-align: right;
+    font-size: 2rem; }
+    @media all and (max-width: 767px) {
+      footer .redes-sociales {
+        text-align: center; } }
+    footer .redes-sociales .icon {
+      padding: .2em;
+      margin: .3em;
+      -webkit-transition: -webkit-transform 1s ease;
+      transition: -webkit-transform 1s ease;
+      -o-transition: transform 1s ease;
+      transition: transform 1s ease;
+      transition: transform 1s ease, -webkit-transform 1s ease; }
+      footer .redes-sociales .icon:hover {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+        color: #2c3e50; }

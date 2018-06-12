@@ -1,0 +1,180 @@
+/*
+ * RC Grid v1.0.0
+ * License: MIT License
+ * Author: @luisrcdev
+ * Repo:
+ * Docs:
+ */
+
+// Breakpoints
+$rc-resp-m: 320px
+$rc-resp-t: 768px
+$rc-resp-p: 1024px
+
+// Nombres para los diferntes tamaños
+$rc-char-size-movil: m
+$rc-char-size-tablet: t
+$rc-char-size-pc: p
+
+// Ancho máximo de las filas
+$rc-width-fila: 80%
+$rc-width-fila-max: 1024px
+$rc-width-fila-tablet: 95%
+
+// Espaciado entre cajas
+$rc-padding-fila: 10px
+
+// Tamaños de breakpoints
+$rc-resp-sizes: ($rc-char-size-movil: $rc-resp-m, $rc-char-size-tablet: $rc-resp-t, $rc-char-size-pc: $rc-resp-p)
+
+// Reset básico y border-box
+*, *:after, *:before
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: sans-serif
+
+// Imágenes responsivas
+img
+  width: 100%
+
+// Alineacion dentro de las cajas
+.align-centro
+  display: flex
+  align-items: center
+
+.align-incio
+  display: flex
+  align-items: flex-start
+
+.align-final
+  display: flex
+  align-items: flex-end
+
+// Ordenamineto flexible
+.primero
+  order: -1
+
+.ultimo
+  order: 1
+
+// Propiedades del contenedor
+.fila
+  width: $rc-width-fila
+  max-width: $rc-width-fila-max
+  margin: 0 auto
+  display: flex
+  flex-flow: row nowrap
+  padding: 0px $rc-padding-fila
+
+  // Poder bajar cajas en la misma fila
+  &.fila-wrap
+    flex-flow: row wrap
+
+  // Alineación de contenido
+  &.fila-inicio
+    justify-content: flex-start
+  &.fila-centro
+    justify-content: center
+  &.fila-final
+    justify-content: flex-end
+  &.fila-around
+    justify-content: space-around
+  &.fila-between
+    justify-content: space-between
+
+  // Propiedades de las columnas
+  & .caja
+    flex: 1 0
+    // Layout
+    @each $rc-x, $rc-y in $rc-resp-sizes
+
+      // Tamaños para cada breakpoint
+      @media all and (min-width:#{$rc-y})
+
+        // Tamaños en fracciones (cuartos)
+        @for $rc-c from 1 through 4
+          &.#{$rc-x}-#{$rc-c}-4
+            flex: 0 0 #{(100%/4)*$rc-c}
+
+        // Tamaños en fracciones (tercios)
+        @for $rc-t from 1 through 5
+          &.#{$rc-x}-#{$rc-t}-5
+            flex: 0 0 #{(100%/5)*$rc-t}
+
+        // Tamaños en fracciones (sextos)
+        @for $rc-s from 1 through 6
+          &.#{$rc-x}-#{$rc-s}-6
+            flex: 0 0 #{(100%/6)*$rc-s}
+// Eliminar todo el padding en la fila y sus columnas
+.fila.fila-libre
+  padding: 0
+  margin: 0
+  width: 100%
+  & .caja
+    padding: 0
+// Modo desarrollador - class="dev" en el body
+body.dev
+  &:before
+    content: 'Fenano CSS | Tamaño menor a Movil: #{$rc-resp-m}'
+    display: block
+    line-height: 30px
+    text-align: center
+    height: 30px
+    background: #ff6188
+    color: white
+  .fila
+    margin: 1em auto
+  .fila,
+  & .caja
+    position: relative
+    padding-top: 16px
+    outline: 1px solid #2C292D
+    &:before
+      color: #f2f2f2
+      outline: 1px solid #2C292D
+      background: #6A7481
+      letter-spacing: 1px
+      content: attr(class)
+      position: absolute
+      font-size: 12px
+      display: table
+      top: 0
+      right: 0
+      width: 100%
+      height: 16px
+      line-height: 16px
+      z-index: 1
+      padding: 0 5px
+// Loop para cambiar el contenido según el ancho del viewport
+@each $rc-x, $rc-y in $rc-resp-sizes
+  @media all and (min-width: #{$rc-y})
+    body.dev:before
+      content: "Fenano CSS | Tamaño #{$rc-x}, a partir de #{$rc-y}"
+
+// Tamaño para pantallas mas chicas que movil
+@media all and (min-width: $rc-resp-m) and (max-width: #{$rc-resp-t - 1px})
+  .fila
+    width: 100% !important
+    padding: 0
+    flex-wrap: wrap
+    .caja
+      flex: 1 1 100%
+      padding: 0 $rc-padding-fila
+  .mostrar-en-#{$rc-char-size-movil}
+    display: block
+  // Clase para ocultar cualquier contenido en tamaño movil
+  .ocultar-en-#{$rc-char-size-movil}
+    display: none
+@media all and (min-width: $rc-resp-t)
+  .fila
+    width: $rc-width-fila-tablet
+@media all and (min-width: $rc-resp-p)
+  .fila
+    width: $rc-width-fila
+
+  // Clase para mostrar contenido sólo en movil
+  .mostrar-en-#{$rc-char-size-movil}
+    display: none
+
+/* Author: @luisrcdev */

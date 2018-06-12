@@ -1,0 +1,182 @@
+doctype
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title rc-grid | Docs
+    link(rel="stylesheet" href="/css/rc-grid-dist.css")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500")
+    link(rel="stylesheet" href="/css/main.css")
+    script(src="/js/fontawesome-all.min.js")
+  body
+    header
+      .fila
+        .caja
+          .header__contenido
+            h1.header__contenido__titulo RC-Grid | Docs
+            h2.header__contenido__subtitulo Un sistema de columnas flexible y fácil de usar.
+    section.filas
+      .fila
+        .caja
+          .section__contenido
+            h1.section__contenido__titulo Las Filas
+            p.section__contenido__subtitulo
+              | Las filas son los contenedores principales (padres), 
+              | cuentan con un ancho definido en cada tamaño de pantalla para aplicar el diseño responsivo de manera adecuada
+      .fila.demo
+        .caja.demo__cajademo.m-2-6
+          code Caja 1
+        .caja.demo__cajademo.m-2-6
+          code Caja 2
+        .caja.demo__cajademo.m-2-6
+          code Caja 3
+      .fila
+        .caja
+          .section__contenido
+            p.section__contenido__texto 
+              span.section__contenido__texto__nota Nota: No pueden existir filas sin cajas adentro. Tampoco cajas sin una fila como contenedor.
+    section.cajas
+      .fila
+        .caja
+          .section__contenido
+            h1.section__contenido__titulo Las Cajas
+            p.section__contenido__subtitulo
+              | Las Cajas son las columnas que se utilizan para dividir el contenido dentro de nuestra página.
+              | Puedes agregar las que necesites dentro de una fila, por defecto tienen un ancho fijo responsivo.
+      .fila.demo
+        .caja.demo__cajademo
+          code Caja 1
+        .caja.demo__cajademo
+          code Caja 2
+        .caja.demo__cajademo
+          code Caja 3
+        .caja.demo__cajademo
+          code Caja 4
+        .caja.demo__cajademo
+          code Caja 5
+      .fila
+        .caja
+          p.section__contenido__texto  
+            span.section__contenido__texto__nota Nota: En tamaño móvil, las cajas sin un ancho declarado, medirán el 100% del ancho de la fila.
+      .fila
+        .caja
+          p.section__contenido__texto
+            | Se puede modificar su tamaño dependiendo la necesidad, por ejemplo:
+          p.section__contenido__subtitulo Fracciones: Cuartos
+      .fila.demo
+        .caja.demo__cajademo.m-1-4
+          code 1-4
+        .caja.demo__cajademo.m-3-4
+          code 3-4
+      .fila.demo
+        .caja.demo__cajademo.m-3-4
+          code 3-4
+        .caja.demo__cajademo.m-1-4
+          code 1-4
+      .fila.demo
+        .caja.demo__cajademo.m-2-4
+          code 2-4
+        .caja.demo__cajademo.m-2-4
+          code 2-4
+      .fila.demo
+        .caja.demo__cajademo.m-1-4
+          code 1-4
+        .caja.demo__cajademo.m-1-4
+          code 1-4
+        .caja.demo__cajademo.m-1-4
+          code 1-4
+        .caja.demo__cajademo.m-1-4
+          code 1-4
+      .fila
+        .caja
+          .section__contenido
+            p.section__contenido__subtitulo Fracciones: Quintos
+      .fila.demo
+        .caja.demo__cajademo.m-1-5
+          code 1-5
+        .caja.demo__cajademo.m-4-5
+          code 4-5
+      .fila.demo
+        .caja.demo__cajademo.m-2-5
+          code 2-5
+        .caja.demo__cajademo.m-3-5
+          code 3-5
+      .fila.demo
+        .caja.demo__cajademo.m-3-5
+          code 3-5
+        .caja.demo__cajademo.m-2-5
+          code 2-5
+      .fila.demo
+        .caja.demo__cajademo.m-4-5
+          code 4-5
+        .caja.demo__cajademo.m-1-5
+          code 1-5
+      .fila.demo
+        .caja.demo__cajademo.m-1-5
+          code 1-5
+        .caja.demo__cajademo.m-1-5
+          code 1-5
+        .caja.demo__cajademo.m-1-5
+          code 1-5
+        .caja.demo__cajademo.m-1-5
+          code 1-5
+        .caja.demo__cajademo.m-1-5
+          code 1-5
+      .fila
+        .caja
+          .section__contenido
+            p.section__contenido__subtitulo Fracciones: Sextos
+      .fila.demo
+        .caja.demo__cajademo.m-1-6
+          code 1-6
+        .caja.demo__cajademo.m-5-6
+          code 5-6
+      .fila.demo
+        .caja.demo__cajademo.m-2-6
+          code 2-6
+        .caja.demo__cajademo.m-4-6
+          code 4-6
+      .fila.demo
+        .caja.demo__cajademo.m-3-6
+          code 3-6
+        .caja.demo__cajademo.m-3-6
+          code 3-6
+      .fila.demo
+        .caja.demo__cajademo.m-4-6
+          code 4-6
+        .caja.demo__cajademo.m-2-6
+          code 2-6
+      .fila.demo
+        .caja.demo__cajademo.m-5-6
+          code 5-6
+        .caja.demo__cajademo.m-1-6
+          code 1-6
+      .fila.demo
+        .caja.demo__cajademo.m-1-6
+          code 1-6
+        .caja.demo__cajademo.m-1-6
+          code 1-6
+        .caja.demo__cajademo.m-1-6
+          code 1-6
+        .caja.demo__cajademo.m-1-6
+          code 1-6
+        .caja.demo__cajademo.m-1-6
+          code 1-6
+        .caja.demo__cajademo.m-1-6
+          code 1-6
+      .fila
+        .caja
+          p.section__contenido__texto
+            | Como podrás observar, existen muchas formas de modificar el tamaño de las cajas,
+            | no obstante, estos tamaños se pueden modificar según el dispositivo que necesitemos:
+            | movil(m), tablet(t) ó pc(p).
+    footer
+      .fila
+        .caja
+          p Ⓒ rc-grid (2018). Todos los derechos reservados.
+        .caja
+          .redes-sociales
+            i.fab.fa-gitlab.icon
+            i.fab.fa-twitter.icon
+            i.fab.fa-youtube.icon
