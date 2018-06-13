@@ -1,0 +1,34 @@
+'.source.pug':
+  'Pug HTML5':
+    'prefix': '!5'
+    'body': """
+    doctype
+    html(lang="es")
+      head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        title ${1:Document}
+        link(rel="stylesheet" href="css/rc-grid-dist.css")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500")
+        link(rel="stylesheet" href="css/${2:main}.css")
+        script(src="js/fontawesome-all.min.js")
+      body
+        ${3:h1 Hola, mundo!}
+    """
+  'Pug rc-grid':
+    'prefix': '.fc'
+    'body': """
+    .fila
+      .caja
+        ${1:Contenido}
+    """
+  'Pug img':
+    'prefix': 'imagen'
+    'body': 'img(src="images/${1:img.png}" alt="${2:My Imagen}")'
+  'Pug a-link':
+    'prefix': 'alink'
+    'body': 'a(href="${1:#}") ${2:Item}'
+  'Pug link':
+    'prefix': 'link'
+    'body': 'link(rel="stylesheet" href="${2:css/${1:main.css}}")'
