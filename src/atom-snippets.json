@@ -32,3 +32,17 @@
   'Pug link':
     'prefix': 'link'
     'body': 'link(rel="stylesheet" href="${2:css/${1:main.css}}")'
+  'Pug Menu Responsive':
+    'prefix': 'nav-responsive'
+    'body': """
+    .nav
+      h1.nav__logo ${1:Document}
+      nav.nav__nav
+        input(type="checkbox" id="toggle")
+        label(for="toggle")
+          i.fas.fa-bars
+        ul.nav__nav__menu
+          li: a(href="#") ${2:Item 1}
+          li: a(href="#") ${3:Item 2}
+          li: a(href="#") ${4:Item 3}
+    """

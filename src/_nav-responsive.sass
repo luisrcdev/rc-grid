@@ -1,0 +1,61 @@
+$primary: #fc5c65
+$light: #f1f1f1
+$dark: #181818
+
+header
+  .nav
+    background: $dark
+    &__logo
+      text-transform: uppercase
+      font-size: 1.5rem
+      font-weight: 300
+      line-height: 2.5
+      text-align: center
+      color: $primary
+    &__nav
+      input
+        display: none
+        &:checked ~ ul
+          display: block
+
+      label
+        color: $light
+        font-size: 1.5em
+        position: absolute
+        top: 0
+        right: 0
+        padding: 15px
+      &__menu
+        display: none
+        list-style: none
+        li
+          a
+            color: transparentize($light, .2)
+            text-decoration: none
+            line-height: 2.5
+            text-align: center
+            display: block
+            border-bottom: 1px solid transparentize($light, .7)
+            transition: all 400ms
+            &:hover
+              color: $primary
+
+@media all and (min-width: 1024px)
+  header
+    .nav
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 0 2em
+      &__logo
+        text-align: left
+        padding-left: 20px
+      &__nav
+        label
+          display: none
+        &__menu
+          display: flex
+          li
+            a
+              padding: 0 1em
+              border: none
