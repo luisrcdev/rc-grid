@@ -94,22 +94,11 @@ footer p {
 footer .redes-sociales {
   color: #ecf0f1;
   text-align: right;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 @media all and (max-width: 767px) {
   footer .redes-sociales {
     text-align: center;
   }
-}
-
-footer .redes-sociales .icon {
-  text-decoration: none;
-  color: #ecf0f1;
-  padding: .3em;
-  display: inline-block;
-}
-
-footer .redes-sociales .icon:hover {
-  color: #2c3e50;
 }
