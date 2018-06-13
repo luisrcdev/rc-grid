@@ -5,10 +5,9 @@ html(lang="es")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible" content="ie=edge")
     title rc-grid | Docs
-    link(rel="stylesheet" href="/css/rc-grid-dist.css")
-    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500")
-    link(rel="stylesheet" href="/css/main.css")
-    script(src="/js/fontawesome-all.min.js")
+    link(rel="stylesheet" href="dist/rc-grid-dist.css")
+    link(rel="stylesheet" href="src/page-styles/main.css")
+    script(src="src/page-styles/js/fontawesome-all.min.js")
   body
     header
       .fila
@@ -22,8 +21,7 @@ html(lang="es")
           .section__contenido
             h1.section__contenido__titulo Las Filas
             p.section__contenido__subtitulo
-              | Las filas son los contenedores principales (padres), 
-              | cuentan con un ancho definido en cada tamaño de pantalla para aplicar el diseño responsivo de manera adecuada
+              | Las filas son los contenedores principales (padres), cuentan con un ancho definido en cada tamaño de pantalla para aplicar el diseño responsivo de manera adecuada
       .fila.demo
         .caja.demo__cajademo.m-2-6
           code Caja 1
@@ -41,9 +39,7 @@ html(lang="es")
         .caja
           .section__contenido
             h1.section__contenido__titulo Las Cajas
-            p.section__contenido__subtitulo
-              | Las Cajas son las columnas que se utilizan para dividir el contenido dentro de nuestra página.
-              | Puedes agregar las que necesites dentro de una fila, por defecto tienen un ancho fijo responsivo.
+            p.section__contenido__subtitulo Las Cajas son las columnas que se utilizan para dividir el contenido dentro de nuestra página. Puedes agregar las que necesites dentro de una fila, por defecto tienen un ancho fijo responsivo.
       .fila.demo
         .caja.demo__cajademo
           code Caja 1
@@ -61,8 +57,7 @@ html(lang="es")
             span.section__contenido__texto__nota Nota: En tamaño móvil, las cajas sin un ancho declarado, medirán el 100% del ancho de la fila.
       .fila
         .caja
-          p.section__contenido__texto
-            | Se puede modificar su tamaño dependiendo la necesidad, por ejemplo:
+          p.section__contenido__texto Se puede modificar su tamaño dependiendo la necesidad, por ejemplo:
           p.section__contenido__subtitulo Fracciones: Cuartos
       .fila.demo
         .caja.demo__cajademo.m-1-4
@@ -167,10 +162,7 @@ html(lang="es")
           code 1-6
       .fila
         .caja
-          p.section__contenido__texto
-            | Como podrás observar, existen muchas formas de modificar el tamaño de las cajas,
-            | no obstante, estos tamaños se pueden modificar según el dispositivo que necesitemos:
-            | movil(m), tablet(t) ó pc(p).
+          p.section__contenido__texto Como podrás observar, existen muchas formas de modificar el tamaño de las cajas, no obstante, estos tamaños se pueden modificar según el dispositivo que necesitemos: movil(m), tablet(t) ó pc(p).
     footer
       .fila
         .caja
